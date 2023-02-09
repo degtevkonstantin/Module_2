@@ -5,16 +5,17 @@
 // Output: 21
 
 const sumArray = (array) => {
-  let allArray = [];
+  const uniteArray = [];
+  let result = 0;
+
   for (mass of array){
     for (element of mass){
-      allArray.push(element)
+      uniteArray.push(element)
     };
   };
 
-  let result = 0;
-  for (counter = 0; counter < allArray.length; counter++){
-    result += allArray[counter];
+  for (element of uniteArray){
+    result += element;
   };
 
   return result;
