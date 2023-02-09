@@ -14,8 +14,9 @@
 // ]
 
 const filterObjects = (array, object) => {
-  resultArr = [];
+  const resultArr = [];
   let counter = 0;
+
   for (element of array){
     counter = 0;
     for (property in element){
