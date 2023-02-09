@@ -8,8 +8,9 @@
 // Output: 8
 
 const uniqueElement = (array) => {
-  let resultArray = [];
+  const resultArray = [];
   let counter1 = 0;
+
   for (let item1 of array) {
     for (let item2 of array) {
       if (item1 === item2) {
