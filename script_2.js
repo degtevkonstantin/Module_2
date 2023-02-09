@@ -14,7 +14,7 @@
 
 
 const checkSimpleNumber = (number) => {
-  let array = [];
+  const array = [];
   for (counter = 1; counter < number; counter++) {
    array.push(counter)
   };
