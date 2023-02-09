@@ -8,6 +8,7 @@
 
 const formString = (string, object) => {
   let counter = false;
+  
   for (element in object) {
     if (counter == true)
       string += '&' + element + '=' + object[element]
