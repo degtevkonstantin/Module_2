@@ -13,7 +13,7 @@
 // ]
 
 const formByName = (array) => {
-  let resultArray = [];
+  const resultArray = [];
   let counter = 0;
 
   for (element1 of array) {
