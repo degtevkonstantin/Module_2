@@ -6,7 +6,8 @@
 // Output: [5, 7, 7, 8, 3, 6, 4, -7]
 
 const deleteElemArray = (array1, array2) => {
-  let resultArray = [];
+  const resultArray = [];
+
   for (element2 of array2){
     for (index in array1){
       if (array1[index] == element2){
