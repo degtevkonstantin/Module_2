@@ -8,6 +8,7 @@ const frequentElement = (array) => {
   let counter = 0;
   let maxCounter = 0;
   let maxElement = 0;
+  
   for (element1 of array) {
     counter = 0;
     for (element2 of array) {
