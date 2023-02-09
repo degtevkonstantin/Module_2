@@ -6,8 +6,9 @@
 
 const formArray = (array) => {
   let counter = 0;
-  let countArray = [];
-  let resultArray = [];
+  const countArray = [];
+  const resultArray = [];
+  
   for (element1 of array) {
     counter = 0;
     for (element2 of element1) {
