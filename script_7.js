@@ -10,14 +10,14 @@ const sumNumber = (number) => {
   number = String(number);
   const array = number.split('');
   let result = 0;
-  let numArray = [];
+  const numArray = [];
 
   for (element of array) {
     numArray.push(Number(element));
   };
 
-  for (let counter = 0; counter < numArray.length; counter++) {
-    result += numArray[counter];
+  for (element of numArray) {
+    result += element;
   };
 
   if (result > 9) {
