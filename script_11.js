@@ -24,7 +24,8 @@
 // Output: [2]
 
 const segmentArray = (array, number1, number2) => {
-  let resultArray = [];
+  const resultArray = [];
+
   if (number2 == null) {
     for (element of array) {
       if (element >= number1) {
