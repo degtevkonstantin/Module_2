@@ -11,6 +11,7 @@
 const countElements = (array) => {
   let count0 = 0;
   let count1 = 0;
+  
   for (element of array) {
     if (element == 0){
       count0++;
