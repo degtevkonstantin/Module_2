@@ -11,7 +11,8 @@
 
 const compareArrays = (array1, array2) => {
   let counter = 0;
-  result = true;
+  let result = true;
+
   for (element1 of array2){
     counter = 0;
     for (element2 of array1){
