@@ -11,11 +11,13 @@ const arr2 = [8, 5, 7, -3, 6, 3, 1, 4, 2];
 const unitUniqueArray = (array, array2) => {
   for (element of array2) {
     array.push(element);
-  }
+  };
 
   let counter2 = 0, resultArray = [];
+  let counter1 = 0;
+  
   for (element of array) {
-    let counter1 = 0;
+    counter1 = 0;
     while (counter1 < counter2 && resultArray[counter1] !== element) {
       counter1++;
     };
