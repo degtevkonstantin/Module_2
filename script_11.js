@@ -23,32 +23,25 @@
 // Input: ([-4, 6, 7, 2, -5, 8], -1, 5)
 // Output: [2]
 
-const segmentArray = (array, number1, number2) => {
-  const resultArray = [];
+const snippetArray = (array, number1, number2) => {
+const resultArray = [];
 
-  if (number2 == null) {
-    for (element of array) {
-      if (element >= number1) {
-        resultArray.push(element);
-      };
-    };
-  } else if (number1 == null) {
-    for (element of array) {
-      if (element <= number2) {
-        resultArray.push(element);
-      };
-    }
-  } else ;{
-    for (element of array) {
-      if (element <= number2 && element >= number1) {
-        resultArray.push(element);
-      };
+for (const element of array){
+  if (number2 == null && element > number1){
+    resultArray.push(element);
+  }
+  if (number1 == null && element < number2){
+    resultArray.push(element);
+  } else {
+    if (element > number1 && element < number2){
+      resultArray.push(element);
     };
   };
-  
+};
+
   return resultArray;
 }
 
-console.log(segmentArray([-4, 6, 7, 2, -5, 8], 3, null));
-console.log(segmentArray([-4, 6, 7, 2, -5, 8], null, 6));
-console.log(segmentArray([-4, 6, 7, 2, -5, 8], -1, 5));
+console.log(snippetArray([-4, 6, 7, 2, -5, 8], 3, null));
+console.log(snippetArray([-4, 6, 7, 2, -5, 8], null, 6));
+console.log(snippetArray([-4, 6, 7, 2, -5, 8], -1, 5));
