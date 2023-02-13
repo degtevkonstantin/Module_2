@@ -13,18 +13,19 @@ const compareArrays = (array1, array2) => {
   let counter = 0;
   let result = true;
 
-  for (element1 of array2){
+  for (element1 of array2) {
     counter = 0;
-    for (element2 of array1){
-      if (element1 == element2){
-        counter++
-      }
-    }
-    if (counter == 0){
-      result = false
-    }
-  }
-  
+    for (element2 of array1) {
+      if (element1 == element2) {
+        counter++;
+      };
+    };
+
+    if (counter == 0) {
+      result = false;
+    };
+  };
+
   return result;
 }
 
