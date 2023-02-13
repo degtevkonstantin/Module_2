@@ -5,23 +5,18 @@
 // Output: ["2", "part", "test", "education", "exceed.team"]
 
 const formArray = (array) => {
-  let counter = 0;
   const countArray = [];
   const resultArray = [];
-  
-  for (element1 of array) {
-    counter = 0;
-    for (element2 of element1) {
-      counter++
-    }
-    countArray.push(counter)
+
+  for (const element of array){
+    countArray.push(element.length)
   }
 
   let counter1 = 0;
-  for (element of array) {
-    for (index in countArray) {
+  for (const element of array) {
+    for (const index in countArray) {
       counter1 = 0;
-      for (element2 of countArray) {
+      for (const element2 of countArray) {
         if (countArray[index] < element2) {
           counter1++
         }
