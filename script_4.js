@@ -8,16 +8,12 @@ const sumArray = (array) => {
   const uniteArray = [];
   let result = 0;
 
-  for (mass of array){
-    for (element of mass){
+  for (const array1 of array) {
+    for (const element of array1) {
       uniteArray.push(element)
+      result += element;
     };
   };
-
-  for (element of uniteArray){
-    result += element;
-  };
-
   return result;
 }
 console.log(sumArray([[1, 2, 3], [4, 5], [6]]));
