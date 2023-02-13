@@ -14,20 +14,15 @@
 
 
 const checkSimpleNumber = (number) => {
-  const array = [];
-  for (counter = 1; counter < number; counter++) {
-   array.push(counter)
-  };
-
-  array.shift();
-  for (element of array) {
-    if (number % element == 0){
-      return true
+  let result = false;
+  const dividers = [2, 3, 5, 7];
+  for (const element of dividers){
+    if (number % element == 0 && element !== number){
+      result = true;
     }
   }
-
-  return false;
+  return result;
 };
 
 console.log(checkSimpleNumber(31));
-console.log(checkSimpleNumber(4))
+console.log(checkSimpleNumber(10));
