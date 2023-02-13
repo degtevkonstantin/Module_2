@@ -6,22 +6,23 @@
 
 // Output: "https://docs.google.com?id=terdh673bb8&limit=5&offset=0"
 
-const formString = (string, object) => {
+const createUrl = (string, object) => {
   let counter = false;
+  let resultStr = string
   
-  for (element in object) {
-    if (counter == true)
-      string += '&' + element + '=' + object[element]
+  for (const element in object) {
+    if (counter)
+      resultStr += '&' + element + '=' + object[element];
     else {
-      string += '?' + element + '=' + object[element];
+      resultStr += '?' + element + '=' + object[element];
       counter = true;
     };
   };
 
-  return string;
+  return resultStr;
 };
 
-console.log(formString("https://docs.google.com",
+console.log(createUrl("https://docs.google.com",
   {
     id: "terdh673bb8",
     limit: 5,
