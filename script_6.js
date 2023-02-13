@@ -12,15 +12,15 @@
 //   { name: "test1", price: 300 }
 // ]
 
-const formByName = (array) => {
+const formName = (array) => {
   const resultArray = [];
   let counter = 0;
 
   for (element1 of array) {
     for (element2 of resultArray) {
       if (element2.name === element1.name) {
-        element2.price += element1.price
-        counter++
+        element2.price += element1.price;
+        counter++;
       }
     }
 
@@ -32,7 +32,7 @@ const formByName = (array) => {
   return resultArray;
 }
 
-console.log(formByName([
+console.log(formName([
   { name: "test", price: 200 },
   { name: "test1", price: 300 },
   { name: "test", price: 100 },
