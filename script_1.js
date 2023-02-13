@@ -9,25 +9,22 @@ const arr1 = [5, 8, -3, 7, 3, 7, 3, 8, 9, 2, 8, -2];
 const arr2 = [8, 5, 7, -3, 6, 3, 1, 4, 2];
 
 const unitUniqueArray = (array, array2) => {
-  for (element of array2) {
-    array.push(element);
-  };
+  let counter = 0;
 
-  let counter2 = 0, resultArray = [];
-  let counter1 = 0;
-  
-  for (element of array) {
-    counter1 = 0;
-    while (counter1 < counter2 && resultArray[counter1] !== element) {
-      counter1++;
+  for (const element2 of array2) {
+    counter = 0;
+    for (const element of array){
+      if (element2 == element){
+        counter++;
+      };
     };
 
-    if (counter1 == counter2) {
-      resultArray[counter2++] = element;
-    };
-  };
+    if (counter == 0){
+      array.push(element2);
+    }
+  }
 
-  return resultArray;
+  return array;
 }
 
 console.log(unitUniqueArray([5, 8, -3, 7, 3, 7, 3, 8, 9, 2, 8, -2], [8, 5, 7, -3, 6, 3, 1, 4, 2]))
