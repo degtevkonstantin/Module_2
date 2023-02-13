@@ -13,18 +13,20 @@
 //    {name: "test1", age: 23, country: "RF", tel: "+79464747484"}
 // ]
 
-const filterObjects = (array, object) => {
+const filterObjects = (array, key, property) => {
   const resultArr = [];
   let counter = 0;
+  const object = {}
+  object[key] = property;
 
-  for (element of array){
+  for (const element of array) {
     counter = 0;
-    for (property in element){
-      if (element[property] == object[property]){
-        counter++
+    for (const property in element) {
+      if (element[property] == object[property]) {
+        counter++;
       };
     };
-    if (counter > 0){
+    if (counter > 0) {
       resultArr.push(element);
     };
   };
@@ -33,7 +35,7 @@ const filterObjects = (array, object) => {
 };
 
 console.log(filterObjects([
-  {name: "test", age: 45, country: "RF", tel: "+79846466744"},
-  {name: "test1", age: 23, country: "RF", tel: "+79464747484"},
-  {name: "test2", age: 18, country: "RF", tel: "+376483876346"},
-], {age: 23}))
+  { name: "test", age: 45, country: "RF", tel: "+79846466744" },
+  { name: "test1", age: 23, country: "RF", tel: "+79464747484" },
+  { name: "test2", age: 18, country: "RF", tel: "+376483876346" },
+], 'age', 23));
