@@ -8,23 +8,16 @@
 
 const sumNumber = (number) => {
   number = String(number);
-  const array = number.split('');
   let result = 0;
-  const numArray = [];
 
-  for (element of array) {
-    numArray.push(Number(element));
-  };
-
-  for (element of numArray) {
-    result += element;
+  for (const element of number) {
+    result += Number(element);
   };
 
   if (result > 9) {
     return sumNumber(result);
-  } else {
+  }
     return result;
-  };
 };
 
 console.log(sumNumber(345));
