@@ -8,21 +8,21 @@
 const deleteElemArray = (array1, array2) => {
   const resultArray = [];
 
-  for (element2 of array2){
-    for (index in array1){
-      if (array1[index] == element2){
+  for (const element2 of array2) {
+    for (const index in array1) {
+      if (array1[index] == element2) {
         array1[index] = undefined;
       };
     };
   };
 
-  for (element of array1){
-    if (element !== undefined){
+  for (const element of array1) {
+    if (element !== undefined) {
       resultArray.push(element);
     };
   };
-  
+
   return resultArray;
 };
 
-console.log(deleteElemArray([5, 7, 2, -1, 7, 8, 3, 6, 2, 9, 4, -7], [2, -1, 9]))
+console.log(deleteElemArray([5, 7, 2, -1, 7, 8, 3, 6, 2, 9, 4, -7], [2, -1, 9]));
