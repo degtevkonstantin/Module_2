@@ -14,10 +14,7 @@ const sumNumber = (number) => {
     result += Number(element);
   };
 
-  if (result > 9) {
-    return sumNumber(result);
-  }
-    return result;
+  return result > 9 ? sumNumber(result) : result;
 };
 
 console.log(sumNumber(345));
