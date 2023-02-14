@@ -22,10 +22,11 @@ const filterObjects = (array, key, property) => {
   for (const element of array) {
     counter = 0;
     for (const property in element) {
-      if (element[property] == object[property]) {
+      if (element[property] === object[property]) {
         counter++;
       };
     };
+    
     if (counter > 0) {
       resultArr.push(element);
     };
