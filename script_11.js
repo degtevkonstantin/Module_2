@@ -23,7 +23,7 @@
 // Input: ([-4, 6, 7, 2, -5, 8], -1, 5)
 // Output: [2]
 
-const snippetArray = (array, number1, number2) => {
+const createArray = (array, number1, number2) => {
   const resultArray = [];
 
   for (const element of array) {
@@ -43,6 +43,6 @@ const snippetArray = (array, number1, number2) => {
   return resultArray;
 }
 
-console.log(snippetArray([-4, 6, 7, 2, -5, 8], 3, null));
-console.log(snippetArray([-4, 6, 7, 2, -5, 8], null, 6));
-console.log(snippetArray([-4, 6, 7, 2, -5, 8], -1, 5));
+console.log(createArray([-4, 6, 7, 2, -5, 8], 3, null));
+console.log(createArray([-4, 6, 7, 2, -5, 8], null, 6));
+console.log(createArray([-4, 6, 7, 2, -5, 8], -1, 5));
