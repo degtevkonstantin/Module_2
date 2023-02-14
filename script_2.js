@@ -16,11 +16,13 @@
 const checkSimpleNumber = (number) => {
   let result = false;
   const dividers = [2, 3, 5, 7];
-  for (const element of dividers){
-    if (number % element == 0 && element !== number){
+
+  for (const element of dividers) {
+    if (number % element == 0 && element !== number) {
       result = true;
     }
   }
+  
   return result;
 };
 
