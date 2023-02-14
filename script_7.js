@@ -7,10 +7,10 @@
 // Output: 3
 
 const sumNumber = (number) => {
-  number = String(number);
+  strNumber = String(number);
   let result = 0;
 
-  for (const element of number) {
+  for (const element of strNumber) {
     result += Number(element);
   };
 
