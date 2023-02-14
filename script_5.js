@@ -25,21 +25,8 @@ const uniqueElement = (array) => {
       counter1 = 0;
     }
   };
-
-  array = resultArray;
-  let counter2 = 0;
-  for (element of array) {
-    let counter1 = 0;
-    while (counter1 < counter2 && resultArray[counter1] !== element) {
-      counter1++;
-    };
-
-    if (counter1 == counter2) {
-      resultArray[counter2++] = element;
-    };
-  };
-
+  
   return resultArray[0];
 }
 
-console.log(uniqueElement([5, 8, 2, 4, 5, 4, 2, 4, 2, 5, 2, 4, 5, 5, 8]));
+console.log(uniqueElement([5, 8, 2, 4, 5, 4, 2, 4, 2, 5, 2, 4, 5]));
