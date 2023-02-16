@@ -7,7 +7,7 @@
 // Output: 3
 
 const sumNumber = (number) => {
-  strNumber = String(number);
+  const strNumber = String(number);
   let result = 0;
 
   for (const element of strNumber) {
